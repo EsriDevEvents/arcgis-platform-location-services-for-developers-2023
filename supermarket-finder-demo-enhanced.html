@@ -14,23 +14,23 @@
 
 
     <!-- ArcGIS version: Load Esri Leaflet from CDN -->
-    <!-- <script src="https://unpkg.com/esri-leaflet@^3.0.8/dist/esri-leaflet.js"></script>
-    <script src="https://unpkg.com/esri-leaflet-vector@4.0.0/dist/esri-leaflet-vector.js"></script> -->
+    <script src="https://unpkg.com/esri-leaflet@^3.0.8/dist/esri-leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-vector@4.0.0/dist/esri-leaflet-vector.js"></script>
     
 
     <!-- ArcGIS version: Esri Leaflet Geocoder -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css"/>
-    <script src="https://unpkg.com/esri-leaflet-geocoder"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css"/>
+    <script src="https://unpkg.com/esri-leaflet-geocoder"></script>
 
 
     <!-- ArcGIS version: Load ArcGIS REST JS modules from CDN -->
-    <!-- <script src="https://unpkg.com/@esri/arcgis-rest-request@4.0.0/dist/bundled/request.umd.js"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-request@4.0.0/dist/bundled/request.umd.js"></script>
     <script src="https://unpkg.com/@esri/arcgis-rest-geocoding@4.0.0/dist/bundled/geocoding.umd.js"></script>
-    <script src="https://unpkg.com/@esri/arcgis-rest-routing@4.0.3/dist/bundled/routing.umd.js"></script> -->
+    <script src="https://unpkg.com/@esri/arcgis-rest-routing@4.0.3/dist/bundled/routing.umd.js"></script>
 
     <!-- OSM version sa3m/leaflet-control-bing-geocoder -->
-    <link rel="stylesheet" href="assets/css/Control.OSMGeocoder.css"/>
-    <script src="assets/js/Control.OSMGeocoder.js"></script> 
+    <!-- <link rel="stylesheet" href="assets/css/Control.OSMGeocoder.css"/>
+    <script src="assets/js/Control.OSMGeocoder.js"></script>  -->
 
     
     <link rel="stylesheet" href="assets/css/styles-supermarket.css">
@@ -98,81 +98,81 @@
         locator.map = L.map('map');
 
         /* OSM version */
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(locator.map);
+        // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        // }).addTo(locator.map);
         /* End OSM version */
         
         /* ArcGIS version */
         // const basemapEnum = "OSM:Standard"
-        // const basemapEnum = "075f776da24748b2a72e49e618417ec3"//"ArcGIS:Navigation"
-        // const layer = L.esri.Vector.vectorBasemapLayer(basemapEnum, { apiKey: "AAPK5b7d664de5fa4fe0aca4b04a395f9f25S4Z37KiHXS4vaT_2kRtYZ39nhZ5NbS1ilZhWdUZwVhIIqHjVlcTomdWJYuEyNuiY"});
-        // layer.addTo(locator.map);
+        const basemapEnum = "075f776da24748b2a72e49e618417ec3"//"ArcGIS:Navigation"
+        const layer = L.esri.Vector.vectorBasemapLayer(basemapEnum, { apiKey: "AAPK5b7d664de5fa4fe0aca4b04a395f9f25S4Z37KiHXS4vaT_2kRtYZ39nhZ5NbS1ilZhWdUZwVhIIqHjVlcTomdWJYuEyNuiY"});
+        layer.addTo(locator.map);
         /* End ArcGIS version */
         
         locator.map.setView(configuration.mapOptions.center, configuration.mapOptions.zoom); 
 
         /* OSM version */
-        var osmGeocoder = new L.Control.OSMGeocoder({
-          collapsed: false,
-          placeholder: "Enter your address or zip code",
-          callback: function (results) {
-            if (locator.searchLocationMarker) {
-              locator.map.removeLayer(locator.searchLocationMarker);
-            }
+        // var osmGeocoder = new L.Control.OSMGeocoder({
+        //   collapsed: false,
+        //   placeholder: "Enter your address or zip code",
+        //   callback: function (results) {
+        //     if (locator.searchLocationMarker) {
+        //       locator.map.removeLayer(locator.searchLocationMarker);
+        //     }
 
-            const coords = [results[0].lat, results[0].lon];
-            locator.searchLocation = {
-              'address': results[0].display_name, 
-              'location': {
-                lng: parseFloat(results[0].lon),
-                lat: parseFloat(results[0].lat)
-              }
-            };
-            locator.searchLocationMarker = L.marker(coords).bindPopup(locator.searchLocation.address, { offset: [0, -12] });
-            locator.map.addLayer(locator.searchLocationMarker);
+        //     const coords = [results[0].lat, results[0].lon];
+        //     locator.searchLocation = {
+        //       'address': results[0].display_name, 
+        //       'location': {
+        //         lng: parseFloat(results[0].lon),
+        //         lat: parseFloat(results[0].lat)
+        //       }
+        //     };
+        //     locator.searchLocationMarker = L.marker(coords).bindPopup(locator.searchLocation.address, { offset: [0, -12] });
+        //     locator.map.addLayer(locator.searchLocationMarker);
 
-            locator.updateBounds();
-            locator.renderResultsList();
-          }
-        });
-        locator.map.addControl(osmGeocoder);
-        const div = document.querySelector(".leaflet-control-geocoder-form");
-        document.querySelector("#locations-panel-list header").appendChild(div);
+        //     locator.updateBounds();
+        //     locator.renderResultsList();
+        //   }
+        // });
+        // locator.map.addControl(osmGeocoder);
+        // const div = document.querySelector(".leaflet-control-geocoder-form");
+        // document.querySelector("#locations-panel-list header").appendChild(div);
         /* End OSM version */
 
         /* ArcGIS version */
-        // var searchControl = L.esri.Geocoding.geosearch({
-        //   providers: [
-        //     L.esri.Geocoding.arcgisOnlineProvider({
-        //       apikey: "AAPK5b7d664de5fa4fe0aca4b04a395f9f25S4Z37KiHXS4vaT_2kRtYZ39nhZ5NbS1ilZhWdUZwVhIIqHjVlcTomdWJYuEyNuiY"
-        //     })
-        //   ],
-        //   placeholder: "Enter your address or zip code",
-        //   expanded: true,
-        //   collapseAfterResult: false,
-        //   zoomToResult: false
-        // }).addTo(locator.map);
+        var searchControl = L.esri.Geocoding.geosearch({
+          providers: [
+            L.esri.Geocoding.arcgisOnlineProvider({
+              apikey: "AAPK5b7d664de5fa4fe0aca4b04a395f9f25S4Z37KiHXS4vaT_2kRtYZ39nhZ5NbS1ilZhWdUZwVhIIqHjVlcTomdWJYuEyNuiY"
+            })
+          ],
+          placeholder: "Enter your address or zip code",
+          expanded: true,
+          collapseAfterResult: false,
+          zoomToResult: false
+        }).addTo(locator.map);
       
-        // searchControl.on("results", function (data) {
-        //   if (locator.searchLocationMarker) {
-        //     locator.map.removeLayer(locator.searchLocationMarker)
-        //   }
+        searchControl.on("results", function (data) {
+          if (locator.searchLocationMarker) {
+            locator.map.removeLayer(locator.searchLocationMarker)
+          }
 
-        //   const coords = [data.results[0].latlng.lat, data.results[0].latlng.lng];
-        //   locator.searchLocation = {
-        //     'address': data.results[0].text, 
-        //     'location': data.results[0].latlng
-        //   };
-        //   locator.searchLocationMarker = L.marker(coords).bindPopup(locator.searchLocation.address, { offset: [0, -12] });
-        //   locator.map.addLayer(locator.searchLocationMarker);
+          const coords = [data.results[0].latlng.lat, data.results[0].latlng.lng];
+          locator.searchLocation = {
+            'address': data.results[0].text, 
+            'location': data.results[0].latlng
+          };
+          locator.searchLocationMarker = L.marker(coords).bindPopup(locator.searchLocation.address, { offset: [0, -12] });
+          locator.map.addLayer(locator.searchLocationMarker);
 
-        //   locator.updateBounds();
-        //   locator.renderResultsList();
-        // });
+          locator.updateBounds();
+          locator.renderResultsList();
+        });
 
-        // const div = document.querySelector(".geocoder-control");
-        // document.querySelector("#locations-panel-list header").appendChild(div);
+        const div = document.querySelector(".geocoder-control");
+        document.querySelector("#locations-panel-list header").appendChild(div);
         /* End ArcGIS version */
         
 
@@ -421,11 +421,11 @@
           {"title":"Store 8","address1":"Manfred-von-Richthofen-Straße 48, 12101 Berlin","address2":"Germany","coords":[52.479574847015584, 13.37829101571836], "placeId":"ChIJR4qudndLx4ARVLDye3zwycw"}
         ],
         "mapOptions": {"center":[52.51212040338423, 13.392486124313024],"zoom":7,"maxZoom":17},
-        "apiKey": "AAPK6cbdc85be8b94adebb566e79b6c4e9811Hc6HYPSEW85HJ8Sb4HAgEQjrD2_fkDIP5wkgu4hSXfZmkqV50uIzxoMc9_uGgHf" // Do not support OD matrix
+        // "apiKey": "AAPK6cbdc85be8b94adebb566e79b6c4e9811Hc6HYPSEW85HJ8Sb4HAgEQjrD2_fkDIP5wkgu4hSXfZmkqV50uIzxoMc9_uGgHf" // Do not support OD matrix
         
         /* ArcGIS version: Enable OD Matrix */
         // Check: Albrechtstraße, 12167
-        // "apiKey": "AAPKad6c6ec7c150472f8e5f27c9818c2592qQwXET--7K35gptXCy9S-uC3mBMqX9v5P_WggXdBluJtCLK2L5wa0i0VL1XwyAda"
+        "apiKey": "AAPKad6c6ec7c150472f8e5f27c9818c2592qQwXET--7K35gptXCy9S-uC3mBMqX9v5P_WggXdBluJtCLK2L5wa0i0VL1XwyAda"
       };
 
       const POPUPS = [
