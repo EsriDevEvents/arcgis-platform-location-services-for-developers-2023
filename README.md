@@ -15,7 +15,10 @@ example heavy usage is not allowed, and some important APIs like address suggest
 We will see how we can to use ArcGIS Locations Services when needed to use a 
 custom basemap and customize add the enhancements listed above.
 
-**View live**: [Supermarket finder demo](https://esridevevents.github.io/arcgis-platform-location-services-for-developers-2023/supermarket-finder-demo.html)
+**View live**: 
+* [Supermarket finder using OSM free services](https://esridevevents.github.io/arcgis-platform-location-services-for-developers-2023/supermarket-finder-demo.html)
+* [Supermarket finder using ArcGIS free tier services](https://esridevevents.github.io/arcgis-platform-location-services-for-developers-2023/supermarket-finder-demo-enhanced.html)
+* [Diff](https://github.com/EsriDevEvents/arcgis-platform-location-services-for-developers-2023/commit/da06b6df638436e2198c2b0d96ce693bb6fde73b)
 
 ---
 
