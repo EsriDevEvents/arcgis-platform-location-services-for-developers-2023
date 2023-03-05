@@ -10,7 +10,15 @@
 
 ### Demos
 
-**Store finder**: OSM free services are great, but it has some limitations, for
+**\[DEMO\] Developer Experience & Developer Dashboard** 
+
+We will see some of the biggest enhancements done to the DX: the conceptual guides (e.g. [Mapping APIs and location services guide](https://developers.arcgis.com/documentation/mapping-apis-and-services/)), the [revamped YouTube channel](https://www.youtube.com/@EsriDevs) and [video gallery](https://mediaspace.esri.com/category/ArcGIS+Developers/244548402), the [Postman collections](https://www.postman.com/arcgis-developer) and the [Developer Dashboard](https://developers.arcgis.com/dashboard/).
+
+---
+
+**\[DEMO\] Store finder**
+
+OSM free services are great, but it has some limitations, for
 example heavy usage is not allowed, and some important APIs like address suggestions/autocomplete or routing distances are not available. 
 We will see how we can to use ArcGIS Locations Services when needed to use a 
 custom basemap and customize add the enhancements listed above.
@@ -22,7 +30,9 @@ custom basemap and customize add the enhancements listed above.
 
 ---
 
-**Data Hosting**: Loading a [dataset with 34980 polygons & 4 attributes per polygon (48.8MB uncompressed)](https://hhkaos2.maps.arcgis.com/home/item.html?id=d1ce356f049d47bea501a80f1485d490)
+**\[DEMO\] Data Hosting**: 
+
+Loading a [dataset with 34980 polygons & 4 attributes per polygon (48.8MB uncompressed)](https://hhkaos2.maps.arcgis.com/home/item.html?id=d1ce356f049d47bea501a80f1485d490)
 * [RAW GeoJSON using Leaflet & OSM basemap](https://esridevevents.github.io/arcgis-platform-location-services-for-developers-2023/leaflet-geojson.html)
 * [RAW GeoJSON with ArcGIS Maps SDK for JavaScript & Esri basemap](https://esridevevents.github.io/arcgis-platform-location-services-for-developers-2023/arcgis-js-sdk-geojson.html)
 * [Feature Tile Layer using ArcGIS Maps SDK for JavaScript & Esri basemap](https://esridevevents.github.io/arcgis-platform-location-services-for-developers-2023/arcgis-js-sdk-fs.html)
