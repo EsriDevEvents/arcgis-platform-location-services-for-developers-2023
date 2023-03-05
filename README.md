@@ -6,7 +6,7 @@
 
 ### Slides
 
-**Check the slides here**: [📚ArcGIS Platform: An Introduction for Developers](https://static.rainfocus.com/esri/22eurdev/sess/1664834620902001ilW1/SPDF/L1005-arcgis-platform-an-introduction-for-developers_1671043985916001OjqS.pdf)
+**Check the slides**: [📚 Coming soon](https://www.esri.com/en-us/about/events/index/proceedings)
 
 ### Demos
 
