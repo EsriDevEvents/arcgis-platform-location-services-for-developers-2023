@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css"/>
-  <script src="https://js.arcgis.com/4.24/"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css"/>
+  <script src="https://js.arcgis.com/4.26/"></script>
   
-  <title>Load 45MB feature service GeoJSON with Leaflet</title>
+  <title>Load 45MB using a Vector Tile Layer using ArcGIS Maps SDK for JavaScript & Esri basemap</title>
   <style>#viewDiv,body,html{padding:0;margin:0;height:100%;width:100%}.esri-popup__button--dock,.esri-popup__button.esri-popup__action{display:none}.esri-view-width-xlarge .esri-popup__main-container{width:250px}.esri-feature {letter-spacing: 0em;line-height: 1.55rem;font-feature-settings: "liga"1, "calt"0;background: #fff;padding: 1em;}.esri-feature__content-element{padding: 0}.esri-feature__content-element p{margin:0}.esri-feature.esri-widget{width:400px; display:none}</style>
 </head>
 <body>
@@ -32,7 +32,7 @@
       esriConfig.apiKey= "AAPK2aed34cdcd844b739e6b5962fdc9d611-qXCveOPXD7v01sR1_Nrq5cPKFwyCTiQYml4rc_jxY8x4_FG9RroaZ5agblzB-Rg";
 
       const webmap = new WebMap({
-        portalItem: { id: "99880ff91cf24b9da0c8ca4f7a2072ea" },
+        portalItem: { id: "32ccb5c4f5cf41138fa01ae127ba7a38" },
         basemap: "arcgis-navigation"
       });
 
