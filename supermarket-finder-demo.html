@@ -106,7 +106,7 @@
         /* ArcGIS version */
         // const basemapEnum = "OSM:Standard"
         // const basemapEnum = "075f776da24748b2a72e49e618417ec3"//"ArcGIS:Navigation"
-        // const layer = L.esri.Vector.vectorBasemapLayer(basemapEnum, { apiKey: "AAPK5b7d664de5fa4fe0aca4b04a395f9f25S4Z37KiHXS4vaT_2kRtYZ39nhZ5NbS1ilZhWdUZwVhIIqHjVlcTomdWJYuEyNuiY"});
+        // const layer = L.esri.Vector.vectorBasemapLayer(basemapEnum, { apiKey: locator.apiKey});
         // layer.addTo(locator.map);
         /* End ArcGIS version */
         
@@ -145,7 +145,7 @@
         // var searchControl = L.esri.Geocoding.geosearch({
         //   providers: [
         //     L.esri.Geocoding.arcgisOnlineProvider({
-        //       apikey: "AAPK5b7d664de5fa4fe0aca4b04a395f9f25S4Z37KiHXS4vaT_2kRtYZ39nhZ5NbS1ilZhWdUZwVhIIqHjVlcTomdWJYuEyNuiY"
+        //       apikey: locator.apiKey
         //     })
         //   ],
         //   placeholder: "Enter your address or zip code",
@@ -421,11 +421,11 @@
           {"title":"Store 8","address1":"Manfred-von-Richthofen-Straße 48, 12101 Berlin","address2":"Germany","coords":[52.479574847015584, 13.37829101571836], "placeId":"ChIJR4qudndLx4ARVLDye3zwycw"}
         ],
         "mapOptions": {"center":[52.51212040338423, 13.392486124313024],"zoom":7,"maxZoom":17},
-        "apiKey": "AAPK6cbdc85be8b94adebb566e79b6c4e9811Hc6HYPSEW85HJ8Sb4HAgEQjrD2_fkDIP5wkgu4hSXfZmkqV50uIzxoMc9_uGgHf" // Do not support OD matrix
+        // "apiKey": locator.apiKey // Do not support OD matrix
         
         /* ArcGIS version: Enable OD Matrix */
         // Check: Albrechtstraße, 12167
-        // "apiKey": "AAPKad6c6ec7c150472f8e5f27c9818c2592qQwXET--7K35gptXCy9S-uC3mBMqX9v5P_WggXdBluJtCLK2L5wa0i0VL1XwyAda"
+        // "apiKey": locator.apiKey
       };
 
       const POPUPS = [
