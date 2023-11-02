@@ -6,7 +6,7 @@
 
 ### Slides
 
-**Check the slides**: [📚 Coming soon](https://www.esri.com/en-us/about/events/index/proceedings)
+**Check the slides**: [📚 ArcGIS Platform: Location Services for Developers.pdf](https://static.rainfocus.com/esri/23epcdev/sess/1673589690135001ERCS/SPDF/16957%20-%20ArcGIS%20Platform%20Location%20Services%20for%20Developers_1682358803963001uTZa.pdf)
 
 ### Demos
 
